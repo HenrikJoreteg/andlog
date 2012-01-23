@@ -10,32 +10,33 @@ Super simple, but solves these pain points:
 
 ## How to use it:
 
-1. include it:
+Step 1. include it:
 
 ```html
 <script src="&log.js"></script>
 ```
 
-2. Use the `console` in your code as usual:
+Step 2. Use the `console` in your code as usual:
 
 ```javascript
 console.log("hello");
 ```
 
-3. If you want to see log output set a value called `debug` in `localStorage` by doing typing this in console:
+Step 3. If you want to see log output set a value called `debug` in `localStorage` by doing typing this in console:
 
 ```javascript
 localStorage.debug = true
 ```
 
-4. Refresh the page, you should now see logs.
+Step 4. Refresh the page, you should now see logs.
 
-5. To turn off console, just delete the localStorage flag:
+Step 5. To turn off console, just delete the localStorage flag:
 
 ```javascript
 delete localStorage.debug
 ```
-6. Feel free to deploy to production this way.
+
+Step 6. Feel free to deploy to production with console stuff in there.
 
 
 ## CommonJS Version
