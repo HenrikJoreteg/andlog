@@ -5,10 +5,40 @@ Super simple, but solves these pain points:
 - Lets you leave log statements in production, client-side code.
 - It won't log anything unless `localStorage.debug` is set.
 - Uses native `console` rather than trying to wrap it in something (which makes the output ugly).
-- Designed for CommonJS on the client (won't work otherwise, sorry).
+- Works with CommonJS.
 - It's just a selective alias for the `window.console` so the normal API applies.
 
 ## How to use it:
+
+1. include it:
+
+```html
+<script src="&log.js"></script>
+```
+
+2. Use the `console` in your code as usual:
+
+```javascript
+console.log("hello");
+```
+
+3. If you want to see log output set a value called `debug` in `localStorage` by doing typing this in console:
+
+```javascript
+localStorage.debug = true
+```
+
+4. Refresh the page, you should now see logs.
+
+5. To turn off console, just delete the localStorage flag:
+
+```javascript
+delete localStorage.debug
+```
+6. Feel free to deploy to production this way.
+
+
+## CommonJS Version
 
 ```javascript
 var logger = require('&log');
