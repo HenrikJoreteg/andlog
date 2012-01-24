@@ -1,12 +1,11 @@
 // follow @HenrikJoreteg and @andyet if you like this ;)
 (function (window) {
     var ls = window.localStorage,
-        out;
+        out = {};
     if (ls && ls.debug && window.console) {
         out = window.console;
     } else {
-        var out = {},
-            methods = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),
+        var methods = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),
             l = methods.length,
             fn = function () {};
         
@@ -14,7 +13,7 @@
             out[methods[l]] = fn;
         }
     }
-    if(typeof exports !== 'undefined') {
+    if (typeof exports !== 'undefined') {
         module.exports = out;
     } else {
         window.console = out;
