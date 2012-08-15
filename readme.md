@@ -10,10 +10,11 @@ Super simple, but solves these pain points:
 
 ## How to use it:
 
+
 Step 1. include it:
 
 ```html
-<script src="&log.js"></script>
+<script src="andlog.js"></script>
 ```
 
 Step 2. Use the `console` in your code as usual:
@@ -41,6 +42,8 @@ Step 6. Feel free to deploy to production with console stuff in there.
 
 ## CommonJS Version
 
+If you're using this on the client but your project is in node.js you can install this with: https://github.com/henrikjoreteg/clientmodules and npm. 
+
 ```javascript
 var logger = require('&log');
 
@@ -64,3 +67,5 @@ console.log('hello');
 ## License
 
 MIT
+
+If you like this, follow [@HenrikJoreteg](http://twitter.com/henrikjoreteg) on the twitterwebz.
