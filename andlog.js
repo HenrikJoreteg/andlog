@@ -1,7 +1,14 @@
 // follow @HenrikJoreteg and @andyet if you like this ;)
 (function (window) {
     var ls = window.localStorage,
-        out = {};
+        out = {},
+        inNode = typeof process !== 'undefined';
+
+    if (inNode) {
+        module.exports = console;
+        return;
+    }
+
     if (ls && ls.debug && window.console) {
         out = window.console;
     } else {
@@ -18,4 +25,4 @@
     } else {
         window.console = out;
     }
-})(window); // make window a local var compression optimization.
+})(this); // make window a local var compression optimization.
