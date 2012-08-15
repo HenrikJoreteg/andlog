@@ -25,4 +25,4 @@
     } else {
         window.console = out;
     }
-})(this); // make window a local var compression optimization.
+})(this);

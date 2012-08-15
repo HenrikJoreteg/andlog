@@ -1,6 +1,6 @@
 {
     "name": "andlog",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "Henrik Joreteg <henrik@andyet.net>",
     "description": "Super-simple, client-side CommonJS logging thingy",
     "main": "andlog.js",
