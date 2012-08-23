@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/HenrikJoreteg/andlog.png)](http://travis-ci.org/HenrikJoreteg/andlog)
 # &log
 
 Super simple, but solves these pain points:
