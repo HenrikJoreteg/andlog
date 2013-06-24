@@ -42,10 +42,10 @@ Step 6. Feel free to deploy to production with console stuff in there.
 
 ## CommonJS Version
 
-If you're using this on the client but your project is in node.js you can install this with: https://github.com/henrikjoreteg/clientmodules and npm. 
+If you're using this on the client but your project is in node.js you can install this with: [browserify](https://github.com/substack/node-browserify/) and npm. 
 
 ```javascript
-var logger = require('&log');
+var logger = require('andlog');
 
 logger.log('hello');
 ```
@@ -59,7 +59,7 @@ console.log('hello');
 You *could* even get fancy and call it `console`. However by doing this you take the risk that you'll forget to `require` it and it'll still work and you'll ship it to production. However, obviously this would work as well:
 
 ```javascript
-var console = require('&log');
+var console = require('andlog');
 
 console.log('hello');
 ```
