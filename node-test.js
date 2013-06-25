@@ -1,4 +1,4 @@
-var logger = require("./&log");
+var logger = require("./andlog");
 
 logger.log("hellow");
 

@@ -1,8 +1,8 @@
 // follow @HenrikJoreteg and @andyet if you like this ;)
-(function (window) {
-    var ls = window.localStorage,
-        out = {},
-        inNode = typeof process !== 'undefined';
+(function () {
+    var inNode = typeof window === 'undefined',
+        ls = !inNode && window.localStorage,
+        out = {};
 
     if (inNode) {
         module.exports = console;
@@ -15,7 +15,7 @@
         var methods = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),
             l = methods.length,
             fn = function () {};
-        
+
         while (l--) {
             out[methods[l]] = fn;
         }
@@ -25,4 +25,4 @@
     } else {
         window.console = out;
     }
-})(this);
+})();
