@@ -1,8 +1,14 @@
 {
     "name": "andlog",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "author": "Henrik Joreteg <henrik@andyet.net>",
     "description": "Super-simple, client-side CommonJS logging thingy",
+    "contributors": [ 
+        {
+            "name": "Philip Roberts",
+            "email": "phil@latentflip.com"
+        } 
+    ],
     "main": "andlog.js",
     "repository": {
         "type": "git",
