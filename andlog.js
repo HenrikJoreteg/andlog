@@ -1,8 +1,9 @@
 // follow @HenrikJoreteg and @andyet if you like this ;)
 (function (window) {
-    var ls = window.localStorage,
+    var global = global || window,
+        ls = global && global.localStorage,
         out = {},
-        inNode = typeof process !== 'undefined';
+        inNode = !ls;
 
     if (inNode) {
         module.exports = console;
