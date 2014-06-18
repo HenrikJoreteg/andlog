@@ -29,6 +29,8 @@ Step 3. If you want to see log output set a value called `debug` in `localStorag
 localStorage.debug = true
 ```
 
+  If you'd like to use a custom debug key then set `localStorage.debugKey = 'something-else'` and then set `localStorage['something-else'] = true` to enable logging.
+
 Step 4. Refresh the page, you should now see logs.
 
 Step 5. To turn off console, just delete the localStorage flag:
