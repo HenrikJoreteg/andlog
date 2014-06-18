@@ -9,8 +9,8 @@
         return;
     }
 
-    var debugKey = ls.debugKey || 'debug'
-    if (ls && ls[debugKey] && window.console) {
+    var andlogKey = ls.andlogKey || 'debug'
+    if (ls && ls[andlogKey] && window.console) {
         out = window.console;
     } else {
         var methods = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),
