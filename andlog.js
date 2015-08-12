@@ -21,9 +21,14 @@
             out[methods[l]] = fn;
         }
     }
+
     if (typeof exports !== 'undefined') {
         module.exports = out;
     } else {
+        window.console = out;
+    }
+
+    if (!inNode && !window.console) {
         window.console = out;
     }
 })();
