@@ -1,17 +1,17 @@
 // follow @HenrikJoreteg and @andyet if you like this ;)
 (function () {
-    function checkLocalStorageSafely() {
-        var hasLocalStorage = false;
+    function getLocalStorageSafely() {
+        var localStorage;
         try {
-            hasLocalStorage = !!window.localStorage;
+            localStorage = window.localStorage;
         } catch (e) {
             // failed: access to localStorage is denied
         }
-        return hasLocalStorage;
+        return localStorage;
     }
 
     var inNode = typeof window === 'undefined',
-        ls = !inNode && checkLocalStorageSafely(),
+        ls = !inNode && getLocalStorageSafely(),
         out = {};
 
     if (inNode) {
