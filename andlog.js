@@ -1,7 +1,17 @@
 // follow @HenrikJoreteg and @andyet if you like this ;)
 (function () {
+    function checkLocalStorageSafely() {
+        var hasLocalStorage = true;
+        try {
+            hasLocalStorage = !!window.localStorage;
+        } catch (e) {
+            hasLocalStorage = false;
+        }
+        return hasLocalStorage;
+    }
+
     var inNode = typeof window === 'undefined',
-        ls = !inNode && window.localStorage,
+        ls = !inNode && checkLocalStorageSafely(),
         out = {};
 
     if (inNode) {
