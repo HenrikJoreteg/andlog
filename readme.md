@@ -44,7 +44,7 @@ Step 6. Feel free to deploy to production with console stuff in there.
 
 ## CommonJS Version
 
-If you're using this on the client but your project is in node.js you can install this with: [browserify](https://github.com/substack/node-browserify/) and npm. 
+If you're using this on the client but your project is in node.js you can install this with: [browserify](https://github.com/substack/node-browserify/) and npm.
 
 ```javascript
 var logger = require('andlog');
@@ -65,6 +65,10 @@ var console = require('andlog');
 
 console.log('hello');
 ```
+
+## Releases
+
+- `1.0.2` bug fix to make sure `ls` is always defined.
 
 ## License
 
