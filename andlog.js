@@ -14,7 +14,7 @@
         ls = !inNode && getLocalStorageSafely(),
         out = {};
 
-    if (inNode) {
+    if (inNode || !ls) {
         module.exports = console;
         return;
     }
